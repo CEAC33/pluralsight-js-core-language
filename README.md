@@ -137,3 +137,65 @@ let price = 149.99;
 
 */
 ```
+
+#### Formatting Code
+
+- Only add blank lines and tabs if it helps to read your code easily
+
+#### Detecting and Fixing Errors
+
+Inspect > Console
+**home.js**
+```JS
+showMessage("Title...");
+
+console.log("any message...");
+```
+
+#### Case Sensitivity
+
+**home.js**
+```JS
+ShowMessage("Title...");
+```
+
+This will throw an error "Uncaught ReferenceError: ShowMessage is not defined"
+
+**home.js**
+```JS
+showmessage("Title...");
+```
+
+This will throw an error "Uncaught ReferenceError: showmessage is not defined"
+
+#### Commenting Code
+
+Comments
+
+```JS
+// Single line comment
+
+/*
+    Multiple line comment
+    Add as many lines as you like
+*/
+```
+
+#### Summary
+
+**Including JS in HTML**
+- <script> </script>
+- <script src="./filename.js"></script>
+
+**Formatting Code**
+- Freely use whitespace
+
+**Detecting Errors**
+
+**Case Sensitivity**
+- JS is case sensitive
+
+**Commenting Code**
+- // single line comment
+- /* multiple line comment */
+****
