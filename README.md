@@ -198,4 +198,196 @@ Comments
 **Commenting Code**
 - // single line comment
 - /* multiple line comment */
-****
+
+### Variables and Constants
+
+#### Introduction
+- Whats is a Variable?
+- Declaring Variables
+- Naming Variables
+- Common Error Using Variables
+- Changing Variable Values
+- Constants
+- The var Keyword
+
+#### What Is a Variable?
+
+#### Declaring Variables
+
+```JS
+let total = 149.99;
+
+let product = 'Hiking Boots';
+
+let discounted = true;
+```
+
+#### Using let to Declare Variables
+
+**home.js**
+```JS
+let welcome = 'Welcome';
+
+let price = 49.99;
+let name = 'Hiking Boots';
+let discounted = false;
+
+let price = 49.99,
+    name = 'Hiking Boots',
+    discounted = false;
+
+showMessage(welcome);
+```
+
+#### Naming Variables
+
+**Valid Variable Names**
+- Start with One of: **_ $ letter**
+- Followed by Zero or More: **_ $ letter number**
+
+```JS
+a
+account
+account_99
+accountNumber
+_accountNumber
+$accountNumber
+_123
+__proto__
+```
+
+#### Common Errors Using Variables
+
+**home.js**
+```JS
+let 99times = 99;
+showMessage(99times);
+```
+
+This will throw the error "Uncaught SyntaxtError: Invalid or unexpected token"
+
+**home.js**
+```JS
+let times99 = 99;
+let _times99 = 99;
+showMessage(times99);
+```
+
+Variable names cannot have spaces and cannot be keywords
+
+**home.js**
+```JS
+let let = 99;
+showMessage(let);
+```
+
+This will throw the error "Uncaught SyntaxtError: let is disallowed as a lexically bound name"
+
+**home.js**
+```JS
+let price;
+showMessage(price);
+```
+
+This will throw the message "undefined"
+
+#### Changing Variable Values
+
+**home.js**
+```JS
+let price = 99.99;
+
+// lots of code ...
+
+price = 49.99;
+
+// more code here ...
+
+price = 29.99;
+
+showMessage(price);
+```
+
+#### Constants
+
+**home.js**
+```JS
+const price = 40;
+
+// lots of code ...
+
+price = 49.99;
+
+showMessage(price);
+```
+
+This will throw the error "Uncaught TypeError: Assigment to constant variable"
+
+**home.js**
+```JS
+const price;
+
+showMessage(price);
+```
+
+This will throw the error "Uncaught SyntaxError: Missing initializer in const declaration"
+
+#### The var Keyword
+
+**home.js**
+```JS
+var price = 25;
+
+showMessage(price);
+```
+
+**home.js**
+```JS
+showMessage(price);
+
+let price = 25;
+```
+
+This will throw the error "Uncaught ReferenceError: Cannot access 'price' before initialization"
+
+**home.js**
+```JS
+showMessage(price);
+
+var price = 25;
+```
+
+This won't show any error
+
+**home.js**
+```JS
+showMessage(price);
+console.log(price);
+
+var price = 25;
+```
+
+This will throw the message "undefined"
+
+#### Summary
+
+**Defined Variables**
+
+**Declared Variables Using let**
+
+**Naming Variables**
+- Begin with: _ $ letter
+- Then 0 or more: _ $ letter number
+
+**Common Errors Using Variables**
+
+**Variables Change Over Time**
+
+**Declaring Constants**
+- The const Keyword
+
+**The var Keyword**
+- Avoid it, use let or const instead
+
+
+
