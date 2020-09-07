@@ -389,5 +389,299 @@ This will throw the message "undefined"
 **The var Keyword**
 - Avoid it, use let or const instead
 
+### Types and Operators
 
+#### Introduction
+- Numbers
+- Strings
+- Converting Between Types
+- Booleans
+- null and undefined
+- Objects and Symbols
+
+#### Numbers
+
+```JS
+let price = 20.99;
+
+showMessage(typeof price); // number
+```
+
+```JS
+let price = '20.99';
+
+showMessage(typeof price); // string
+```
+
+```JS
+let price = 20.99;
+
+price += 1;
+//price = price + 1;
+
+showMessage(price); // 21.99
+```
+
+```JS
+let price = 20.99;
+
+price -= 1;
+//price = price - 1;
+
+showMessage(price); // 19.99
+```
+
+```JS
+let price = 12;
+
+price *= 3;
+//price = price * 3;
+
+showMessage(price); // 36
+```
+
+```JS
+let price = 12;
+
+price /= 3;
+//price = price / 3;
+
+showMessage(price); // 4
+```
+
+```JS
+let price = 12;
+
+price %= 5;
+//price = price % 5;
+
+showMessage(price); // 2
+```
+
+```JS
+let price = 12,
+    taxRate = 0.07;
+
+showMessage(price * taxRate); // 0.84
+```
+
+```JS
+let price = 12;
+
+showMessage(++price); // 13
+```
+
+```JS
+let price = 12;
+
+showMessage(price++); // 12
+console.log(price);  // 13
+```
+
+```JS
+let price = 12;
+
+showMessage(price--); // 12
+console.log(price);  // 11
+```
+
+```JS
+let price = 3 + 2 * 2;
+
+console.log(price);  // 7
+```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#:~:text=Operator%20precedence%20determines%20how%20operators,of%20operators%20with%20lower%20precedence.
+
+```JS
+let price = (3 + 2) * 2;
+
+console.log(price);  // 10
+```
+
+#### Number Precision
+
+```JS
+let price = 1.1 + 1.3;
+
+console.log(price);  // 2.4000000000000004
+```
+
+#### Negative Numbers
+
+```JS
+let price = -20;
+
+console.log(price);  // -20
+```
+
+```JS
+let price = 20 - (-2);
+
+console.log(price);  // 22
+```
+
+```JS
+let price = 0;
+
+console.log(--price);  // -1
+```
+
+#### Strings
+
+```JS
+let message = "Hello \"World\"";
+
+console.log(message);  // Hello "World"
+```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+```JS
+let name = 'Andrea'
+let message = `Hello 
+
+${name}`;
+
+showMessage(message);  // Hello Andrea
+console.log(message);  
+/* Hello  
+
+Andrea*/
+```
+
+#### Manipulating Strings
+
+```JS
+let message = 'Hello';
+message = message + ' World'
+showMessage(message);  // Hello World
+```
+
+```JS
+let message = 'Hello';
+message = message.toLowerCase();
+showMessage(message);  // hello
+```
+
+```JS
+let message = 'Hello';
+message = message.toUpperCase();
+showMessage(message);  // HELLO
+```
+
+```JS
+let message = 'Hello';
+message = message.substring(1)
+showMessage(message);  // ello
+```
+
+```JS
+let message = 'Hello';
+message = message.length;
+showMessage(message);  // 5
+```
+
+```JS
+let message = '123';
+
+showMessage(message + 2);  // 1232
+```
+
+#### Converting Strings and Numbers
+
+```JS
+let amount = 123;
+amount = amount.toString();
+showMessage(typeof message);  // string
+```
+
+```JS
+let amount = Number.parseFloat("123.12");
+showMessage(typeof message);  // number
+```
+
+```JS
+let amount = Number.parseFloat("A123.12");
+showMessage(message);  // Nan
+```
+
+```JS
+let amount = Number.parseFloat("123.12A");
+showMessage(message);  // 123.12
+```
+
+#### Boolean Variables
+
+```JS
+let saved = false;
+showMessage(typeof saved);  // boolean
+```
+
+```JS
+let saved = true;
+showMessage(typeof saved);  // boolean
+```
+
+```JS
+let saved = true;
+saved =  !saved;
+showMessage(saved);  // false
+```
+
+#### null and undefined
+
+```JS
+let saved;
+showMessage(saved);  // 
+console.log(saved);  // undefined
+```
+
+```JS
+let saved = 10;
+saved = null;
+showMessage(saved);  // 
+console.log(saved);  // null
+```
+
+#### Objects and Symbols
+
+```JS
+let person = {
+    firstName: 'John',
+    lastName: 'Adams'
+};
+showMessage(typeof person);  // object
+```
+
+```JS
+let person = {
+    firstName: 'John',
+    lastName: 'Adams'
+};
+showMessage(person.firstName);  // John
+```
+
+#### Summary
+
+**Numers**
+
+**Strings**
+- 3 styles of quotes: "". '', ``
+
+**Converting Between Types**
+- variable.toString()
+- Number.parseFloat("123")
+- Nan (Not a Number)
+
+**Booleans**
+- true or false
+- ! symbol (not)
+
+**null and undefined**
+- undefined is assigned by JS
+- null is assigned by developers
+
+**Objects and Symbols**
+- Objects created by {...}
 
